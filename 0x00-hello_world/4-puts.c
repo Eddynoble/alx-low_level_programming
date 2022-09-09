@@ -1,9 +1,10 @@
 #include <stdio.h>
 
 /**
- *main - entry point
+ *main - print the string and put it in the function
  *
- *Description: shell level
+ *Description: Use the main function
+ *prints exactly "programming is like building a multilingual puzzle"
  *Return: 0
  */
 int main(void)
