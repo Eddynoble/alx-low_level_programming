@@ -1,27 +1,27 @@
-#include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+#include "main.h"
 
 /**
-* main - Program that generates random valid passwords
-* @void: Empty input
-*
-* Description: Program that generates random valid passwords
-* Return: 0 if works
-*/
+ * main - entry point
+ *
+ * Return: generated password
+ */
+
 int main(void)
 {
-	int i = 0, random, checksum;
+	char c;
+	int x;
 
-	srand(time(NULL));
-	checksum = 2772;
-	while (checksum > 122)
+	srand(time(0));
+	while (x <= 2645)
 	{
-		random = (rand() % 100);
-		printf("%c", random);
-		checksum -= random;
-		i++;
+		c = rand() % 128;
+		x += c;
+		putchar(c);
 	}
-	printf("%c", checksum);
+	putchar(2772 - x);
+
 	return (0);
 }
