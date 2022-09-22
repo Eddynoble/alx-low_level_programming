@@ -1,19 +1,32 @@
-#include "_putchar.h"
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
 
 /**
- * main - function to print
+ * main - Positive anything is better than negative nothing
  *
+ * Description: Using the main funtion
+ * this prints positive and negative
  * Return: 0
  */
 int main(void)
 {
-	char _putchar[9] = {'H', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n'};
-	unsigned int c;
+	int n;
 
-	for (c = 0; c < sizeof(_putchar); c++)
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	/* your code goes there */
+	if (n > 0)
 	{
-		_putchar(_putchar[c]);
+		printf("%i is positive\n", n);
 	}
-_putchar('\n');
-return (0);
+	else if (n == 0)
+	{
+		printf("%i is zero\n", n);
+	}
+	else if (n < 0)
+	{
+		printf("%i is negative\n", n);
+	}
+	return (0);
 }
