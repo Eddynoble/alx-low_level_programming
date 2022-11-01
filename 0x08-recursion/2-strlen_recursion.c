@@ -1,22 +1,25 @@
 /*                                                                                                                                      
- * File: 0-puts_recursion.c                                                                                                             
- * Auth: sam                                                                                                                            
+ * File: 2-strlen_recursion.c                                                                                                           
+ * Auth: smone                                                                                                                          
  */                                                                                                                                     
                                                                                                                                         
 #include "main.h"                                                                                                                       
                                                                                                                                         
 /**                                                                                                                                     
- * _puts_recursion - Prints a string, followed by a new line.                                                                           
- * @s: The string to be printed.                                                                                                        
+ * _strlen_recursion - Returns the length of a string.                                                                                  
+ * @s: The string to be measured.                                                                                                       
+ *                                                                                                                                      
+ * Return: The length of the string.                                                                                                    
  */                                                                                                                                     
-void _puts_recursion(char *s)                                                                                                           
+int _strlen_recursion(char *s)                                                                                                          
 {                                                                                                                                       
+        int len = 0;                                                                                                                    
+                                                                                                                                        
         if (*s)                                                                                                                         
         {                                                                                                                               
-                _putchar(*s);                                                                                                           
-                _puts_recursion(s + 1);                                                                                                 
+                len++;                                                                                                                  
+                len += _strlen_recursion(s + 1);                                                                                        
         }                                                                                                                               
                                                                                                                                         
-        else                                                                                                                            
-                _putchar('\n');                                                                                                         
+        return (len);                                                                                                                   
 }
