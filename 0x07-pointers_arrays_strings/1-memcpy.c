@@ -1,28 +1,21 @@
-/*
- * File: 1-memcpy.c
- * Auth: Eddynoble
- */
-
 #include "main.h"
-
 /**
- * _memcpy - copies @n bytes from the memory area pointed
- *           to by @src into that pointed to by @dest.
- * @dest: A pointer to the memory area to copy @src into.
- * @src: the source buffer to copy character from.
- * @n: the number of bytes to copy from @src.
+ *_memcpy - a function that copies memory area
+ *@dest: memory where is stored
+ *@src: memory where is copied
+ *@n: number of bytes
  *
- * Return: A pointer to the destination buffer @dest.
+ *Return: copied memory with n byted changed
  */
-void *_memcpy(void *dest, const void *src, size_t n);
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int index;
-	unsigned char *destination * dest;
-	const unsigned char *source = src;
+	int r = 0;
+	int i = n;
 
-	for (index = 0; index < n; index++)
-		destination[index] = source[index];
-
+	for (; r < i; r++)
+	{
+		dest[r] = src[r];
+		n--;
+	}
 	return (dest);
 }
-
